@@ -1,5 +1,5 @@
 git remote rm origin
-git remote add origin https://saki2024@github.com/saki2024/AMS
+git remote add origin https://github.com/saki789/Todo
 git push --set-upstream origin main
 
 To fetch updates from a remote repository (like GitHub), you can use the following Git command:
