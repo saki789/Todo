@@ -7,3 +7,7 @@ git fetch origin
 
 If you want to also merge the changes into your local branch, you can use:
 git pull origin main
+
+# create requirements
+pip3 install pipreqs
+pip3 freeze > requirements.txt
