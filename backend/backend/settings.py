@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'stock',
     'survey',
     'timesheet',
-    'todo',
+  
 ]
 
 MIDDLEWARE = [
