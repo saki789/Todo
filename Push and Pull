@@ -19,5 +19,4 @@ python -m pip install -r requirements.txt
 # DJANGO ORM
 
 python manage.py inspectdb > models.py
-
 python manage.py migrate --fake-initial

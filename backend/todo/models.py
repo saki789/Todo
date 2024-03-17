@@ -1,5 +1,7 @@
+from tarfile import NUL
 from tkinter import CASCADE
 from django.db import models
+from zmq import NULL
 
 # Create your models here.
 
@@ -12,13 +14,14 @@ class Lkptblgender(models.Model):
         managed = False
         db_table = 'lkptblgender'
 
+
 class Tblemployeeprofile1(models.Model):
-    id = models.IntegerField(db_column='ID', blank=True, null=False, primary_key=True)  # Field name made lowercase.
+    id = models.IntegerField(db_column='ID', blank=True, null=False,primary_key=True)  # Field name made lowercase.
     gridno = models.IntegerField(db_column='GridNo', blank=True, null=True)  # Field name made lowercase.
     txtmiddlename = models.CharField(db_column='txtMiddleName', max_length=27, blank=True, null=True)  # Field name made lowercase.
     txtsurname = models.CharField(db_column='txtSurname', max_length=29, blank=True, null=True)  # Field name made lowercase.
     dtmdob = models.CharField(db_column='dtmDOB', max_length=15, blank=True, null=True)  # Field name made lowercase.
-    lkpgender = models.ForeignKey(Lkptblgender,on_delete=models.CASCADE)  # Field name made lowercase.
+    lkpgender = models.CharField(db_column='lkpGender', max_length=1, blank=True, null=True)  # Field name made lowercase.
     txtfnpfno = models.CharField(db_column='txtFNPFNo', max_length=36, blank=True, null=True)  # Field name made lowercase.
     txttinno = models.CharField(db_column='txtTinNo', max_length=18, blank=True, null=True)  # Field name made lowercase.
     intmobile = models.CharField(db_column='intMobile', max_length=23, blank=True, null=True)  # Field name made lowercase.
